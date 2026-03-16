@@ -8,77 +8,43 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-/* ── DARK THEME ── */
 [data-theme="dark"]{
-  --bg:#07070d;
-  --bg2:#0d0d18;
-  --card:#141421;
-  --card2:#1a1a2e;
-  --border:rgba(255,255,255,0.06);
-  --border2:rgba(255,255,255,0.12);
-  --accent:#8b7cf6;
-  --accent-dim:rgba(139,124,246,0.15);
-  --teal:#22d3b0;
-  --teal-dim:rgba(34,211,176,0.12);
-  --pink:#f472b6;
-  --pink-dim:rgba(244,114,182,0.12);
-  --amber:#fbbf24;
-  --amber-dim:rgba(251,191,36,0.12);
-  --green:#4ade80;
-  --green-dim:rgba(74,222,128,0.10);
-  --text:#eeeeff;
-  --text2:#a8a8c8;
-  --text3:#5f5f80;
+  --bg:#07070d;--bg2:#0d0d18;--card:#141421;--card2:#1a1a2e;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --accent:#8b7cf6;--accent-dim:rgba(139,124,246,0.15);
+  --teal:#22d3b0;--teal-dim:rgba(34,211,176,0.12);
+  --pink:#f472b6;--pink-dim:rgba(244,114,182,0.12);
+  --amber:#fbbf24;--amber-dim:rgba(251,191,36,0.12);
+  --green:#4ade80;--green-dim:rgba(74,222,128,0.10);
+  --text:#eeeeff;--text2:#a8a8c8;--text3:#5f5f80;
   --nav-bg:rgba(7,7,13,0.88);
   --hero-dots:rgba(139,124,246,0.16);
   --hero-orb:rgba(139,124,246,0.07);
-  --hero-name-start:#ffffff;
-  --hero-name-mid:#c4b8ff;
-  --hero-name-end:#8b7cf6;
-  --metric-bg:rgba(34,211,176,0.10);
-  --metric-border:rgba(34,211,176,0.20);
-  --metric-color:#7ff8e6;
+  --name-c1:#ffffff;--name-c2:#c4b8ff;--name-c3:#8b7cf6;
+  --metric-bg:rgba(34,211,176,0.10);--metric-border:rgba(34,211,176,0.20);--metric-color:#7ff8e6;
   --proj-bottom:rgba(0,0,0,0.18);
-  --toggle-track:#1a1a2e;
-  --toggle-border:rgba(255,255,255,0.12);
-  --edu-year:rgba(255,255,255,0.08);
+  --toggle-track:#1a1a2e;--toggle-border:rgba(255,255,255,0.12);
+  --edu-year-color:rgba(255,255,255,0.08);
   --shadow:none;
 }
 
-/* ── LIGHT THEME ── */
 [data-theme="light"]{
-  --bg:#f4f4f9;
-  --bg2:#eaeaf4;
-  --card:#ffffff;
-  --card2:#f0eff9;
-  --border:rgba(0,0,0,0.07);
-  --border2:rgba(0,0,0,0.14);
-  --accent:#6c5ce7;
-  --accent-dim:rgba(108,92,231,0.10);
-  --teal:#0ea882;
-  --teal-dim:rgba(14,168,130,0.10);
-  --pink:#d6417e;
-  --pink-dim:rgba(214,65,126,0.10);
-  --amber:#b8860b;
-  --amber-dim:rgba(184,134,11,0.10);
-  --green:#2d8a4e;
-  --green-dim:rgba(45,138,78,0.10);
-  --text:#1a1a2e;
-  --text2:#4a4a6a;
-  --text3:#9090aa;
+  --bg:#f4f4f9;--bg2:#eaeaf4;--card:#ffffff;--card2:#f0eff9;
+  --border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.14);
+  --accent:#6c5ce7;--accent-dim:rgba(108,92,231,0.10);
+  --teal:#0ea882;--teal-dim:rgba(14,168,130,0.10);
+  --pink:#d6417e;--pink-dim:rgba(214,65,126,0.10);
+  --amber:#b8860b;--amber-dim:rgba(184,134,11,0.10);
+  --green:#2d8a4e;--green-dim:rgba(45,138,78,0.10);
+  --text:#1a1a2e;--text2:#4a4a6a;--text3:#9090aa;
   --nav-bg:rgba(244,244,249,0.92);
   --hero-dots:rgba(108,92,231,0.12);
   --hero-orb:rgba(108,92,231,0.05);
-  --hero-name-start:#1a1a2e;
-  --hero-name-mid:#4a3fa0;
-  --hero-name-end:#6c5ce7;
-  --metric-bg:rgba(14,168,130,0.09);
-  --metric-border:rgba(14,168,130,0.22);
-  --metric-color:#0a7a5e;
+  --name-c1:#1a1a2e;--name-c2:#4a3fa0;--name-c3:#6c5ce7;
+  --metric-bg:rgba(14,168,130,0.09);--metric-border:rgba(14,168,130,0.22);--metric-color:#0a7a5e;
   --proj-bottom:rgba(0,0,0,0.03);
-  --toggle-track:#ffffff;
-  --toggle-border:rgba(0,0,0,0.14);
-  --edu-year:rgba(0,0,0,0.08);
+  --toggle-track:#ffffff;--toggle-border:rgba(0,0,0,0.14);
+  --edu-year-color:rgba(0,0,0,0.08);
   --shadow:0 2px 16px rgba(108,92,231,0.08);
 }
 
@@ -89,7 +55,6 @@ body{
   font-weight:400;line-height:1.7;overflow-x:hidden;
   transition:background 0.35s,color 0.35s;
 }
-
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
@@ -99,14 +64,12 @@ nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   display:flex;justify-content:space-between;align-items:center;
   padding:1rem 5rem;
-  background:var(--nav-bg);
-  backdrop-filter:blur(20px);
+  background:var(--nav-bg);backdrop-filter:blur(20px);
   border-bottom:0.5px solid var(--border);
   transition:background 0.35s,border-color 0.35s;
 }
 .logo{
-  font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;
-  letter-spacing:0.05em;
+  font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;letter-spacing:0.05em;
   background:linear-gradient(90deg,var(--accent),var(--teal));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
@@ -127,19 +90,16 @@ nav{
 
 /* ── THEME TOGGLE ── */
 .theme-toggle{
-  position:relative;width:52px;height:28px;border-radius:100px;
+  width:52px;height:28px;border-radius:100px;
   background:var(--toggle-track);border:0.5px solid var(--toggle-border);
   cursor:pointer;transition:background 0.35s,border-color 0.35s;
-  flex-shrink:0;display:flex;align-items:center;padding:4px;
-  outline:none;
+  flex-shrink:0;display:flex;align-items:center;padding:4px;outline:none;
 }
 .toggle-knob{
-  width:20px;height:20px;border-radius:50%;
-  background:var(--accent);
+  width:20px;height:20px;border-radius:50%;background:var(--accent);
   display:flex;align-items:center;justify-content:center;
-  font-size:11px;line-height:1;
+  font-size:11px;line-height:1;user-select:none;
   transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
-  user-select:none;
 }
 [data-theme="dark"]  .toggle-knob{transform:translateX(0)}
 [data-theme="light"] .toggle-knob{transform:translateX(24px)}
@@ -162,7 +122,8 @@ nav{
   background:radial-gradient(circle,var(--hero-orb) 0%,transparent 65%);
   pointer-events:none;
 }
-.hero-content{max-width:780px;position:relative;z-index:1}
+.hero-content{max-width:100%;width:100%;position:relative;z-index:1;}
+
 .hero-status{
   display:inline-flex;align-items:center;gap:10px;
   font-family:'DM Mono',monospace;font-size:0.72rem;
@@ -176,28 +137,30 @@ nav{
 }
 @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(0.7)}}
 
+/* ── NAME FIX: responsive size, no overflow ── */
 .hero h1{
   font-family:'Syne',sans-serif;
-  font-size:clamp(2.6rem,5.5vw,5rem);
-  font-weight:800;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.8rem;
-  overflow:visible;
+  font-size:clamp(1.9rem,4vw,4rem);
+  font-weight:800;line-height:1.15;letter-spacing:-0.02em;
+  margin-bottom:1.8rem;
 }
 .hero-name{
-  background:linear-gradient(90deg,var(--hero-name-start) 0%,var(--hero-name-mid) 55%,var(--hero-name-end) 100%);
+  display:block;
+  padding-bottom:0.1em;
+  background:linear-gradient(90deg,var(--name-c1) 0%,var(--name-c2) 50%,var(--name-c3) 100%);
   -webkit-background-clip:text;
   background-clip:text;
   -webkit-text-fill-color:transparent;
   color:transparent;
-  display:block;
-  width:100%;
-  padding-bottom:0.05em;
 }
 .hero-title-line{
-  color:var(--text3);font-weight:400;font-size:0.6em;
-  letter-spacing:0.01em;display:block;margin-top:0.3rem;
+  color:var(--text3);font-weight:400;font-size:0.55em;
+  letter-spacing:0.02em;display:block;margin-top:0.4rem;
+  -webkit-text-fill-color:var(--text3);
 }
+
 .hero-desc{
-  font-size:1.1rem;color:var(--text2);max-width:560px;
+  font-size:1.05rem;color:var(--text2);max-width:580px;
   margin-bottom:2.5rem;line-height:1.85;font-weight:300;
 }
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem}
@@ -222,9 +185,12 @@ nav{
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   line-height:1;display:block;margin-bottom:4px;
 }
-.meta-label{font-size:0.72rem;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;font-family:'DM Mono',monospace}
+.meta-label{
+  font-size:0.72rem;color:var(--text3);
+  letter-spacing:0.08em;text-transform:uppercase;font-family:'DM Mono',monospace;
+}
 
-/* ── SECTION COMMONS ── */
+/* ── SECTIONS ── */
 section{padding:7rem 5rem}
 .section-eyebrow{
   font-family:'DM Mono',monospace;font-size:0.68rem;
@@ -272,8 +238,7 @@ section{padding:7rem 5rem}
 .exp-card{
   display:grid;grid-template-columns:220px 1fr;
   border:0.5px solid var(--border);border-radius:16px;overflow:hidden;
-  margin-bottom:1.5rem;transition:border-color 0.25s;
-  box-shadow:var(--shadow);
+  margin-bottom:1.5rem;transition:border-color 0.25s;box-shadow:var(--shadow);
 }
 .exp-card:hover{border-color:rgba(139,124,246,0.4)}
 .exp-sidebar{
@@ -298,10 +263,7 @@ section{padding:7rem 5rem}
 .exp-title{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:0.3rem;letter-spacing:-0.01em}
 .exp-subtitle{font-size:0.82rem;color:var(--accent);font-family:'DM Mono',monospace;margin-bottom:1.5rem}
 .exp-points{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
-.exp-points li{
-  font-size:0.9rem;color:var(--text2);
-  padding-left:1.4rem;position:relative;line-height:1.75;
-}
+.exp-points li{font-size:0.9rem;color:var(--text2);padding-left:1.4rem;position:relative;line-height:1.75}
 .exp-points li::before{content:'▸';position:absolute;left:0;color:var(--teal);font-size:0.75rem;top:3px}
 .hi{color:var(--teal);font-weight:500}
 .hi-a{color:var(--accent);font-weight:500}
@@ -317,10 +279,8 @@ section{padding:7rem 5rem}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
 .project-card{
   background:var(--card);border:0.5px solid var(--border);
-  border-radius:16px;overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;
-  box-shadow:var(--shadow);
+  border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+  transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;box-shadow:var(--shadow);
 }
 .project-card:hover{border-color:rgba(139,124,246,0.4);transform:translateY(-4px)}
 [data-theme="light"] .project-card:hover{box-shadow:0 12px 36px rgba(108,92,231,0.12)}
@@ -346,8 +306,7 @@ section{padding:7rem 5rem}
   display:inline-flex;align-items:center;gap:6px;
   font-size:0.75rem;padding:5px 14px;border-radius:6px;
   border:0.5px solid var(--border2);color:var(--text2);
-  text-decoration:none;font-family:'DM Mono',monospace;
-  transition:all 0.18s;
+  text-decoration:none;font-family:'DM Mono',monospace;transition:all 0.18s;
 }
 .proj-link:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
 .proj-link.live{background:var(--accent);color:#fff;border-color:var(--accent)}
@@ -368,8 +327,7 @@ section{padding:7rem 5rem}
   background:var(--card);border:0.5px solid var(--border);
   border-radius:16px;padding:1.6rem;
   display:flex;gap:1.2rem;align-items:flex-start;
-  transition:border-color 0.25s,transform 0.2s;
-  box-shadow:var(--shadow);
+  transition:border-color 0.25s,transform 0.2s;box-shadow:var(--shadow);
 }
 .achieve-card:hover{border-color:rgba(34,211,176,0.35);transform:translateY(-2px)}
 .achieve-icon-wrap{
@@ -390,8 +348,7 @@ section{padding:7rem 5rem}
   display:grid;grid-template-columns:1fr auto;
   background:var(--card);border:0.5px solid var(--border);
   border-radius:16px;padding:2.2rem 2.5rem;
-  align-items:center;gap:2rem;transition:border-color 0.25s;
-  box-shadow:var(--shadow);
+  align-items:center;gap:2rem;transition:border-color 0.25s;box-shadow:var(--shadow);
 }
 .edu-card:hover{border-color:rgba(139,124,246,0.35)}
 .edu-degree{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:-0.015em;margin-bottom:5px}
@@ -404,7 +361,7 @@ section{padding:7rem 5rem}
 }
 .edu-year{
   font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;
-  color:var(--edu-year);text-align:right;white-space:nowrap;letter-spacing:-0.03em;
+  color:var(--edu-year-color);text-align:right;white-space:nowrap;letter-spacing:-0.03em;
 }
 
 /* ── CONTACT ── */
@@ -430,11 +387,9 @@ footer{
   font-family:'DM Mono',monospace;letter-spacing:0.08em;
 }
 
-/* ── ANIMATIONS ── */
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
-/* ── RESPONSIVE ── */
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}
   .nav-links{display:none}
@@ -445,7 +400,6 @@ footer{
   .exp-sidebar{border-right:none;border-bottom:0.5px solid var(--border)}
   .edu-card{grid-template-columns:1fr}
   .edu-year{display:none}
-  .hero h1{font-size:2.8rem}
   .hero-meta{gap:2rem}
 }
 </style>
@@ -469,7 +423,7 @@ footer{
   </div>
 </nav>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg-dots"></div>
   <div class="hero-orb"></div>
@@ -486,7 +440,7 @@ footer{
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View My Work ↓</a>
-      <a href="/cdn-cgi/l/email-protection#533e3832253a2a32373b3221203b3a3d3a62613220252513343e323a3f7d303c3e" class="btn btn-outline">Get In Touch</a>
+      <a href="mailto:mkaviyadharshini12asvv@gmail.com" class="btn btn-outline">Get In Touch</a>
       <a href="https://github.com/Kaviyadharshini1211" target="_blank" class="btn btn-outline">GitHub ↗</a>
     </div>
     <div class="hero-meta">
@@ -510,7 +464,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ SKILLS ═══ -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-eyebrow">01 · Technical Skills</div>
   <h2 class="section-heading">What I Work With</h2>
@@ -601,7 +555,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ EXPERIENCE ═══ -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-eyebrow">02 · Work Experience</div>
   <h2 class="section-heading">Where I've Contributed</h2>
@@ -654,13 +608,12 @@ footer{
   </div>
 </section>
 
-<!-- ═══ PROJECTS ═══ -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-eyebrow">03 · Featured Projects</div>
   <h2 class="section-heading">Things I've Built</h2>
   <div class="projects-grid">
 
-    <!-- Predictly -->
     <div class="project-card fade-in">
       <div class="project-top">
         <div class="project-header">
@@ -669,11 +622,7 @@ footer{
         </div>
         <div class="project-name">Predictly</div>
         <div class="project-tagline">Smart Price Prediction · Amazon ML Challenge 2025</div>
-        <p class="project-desc">
-          Multimodal ensemble model combining SBERT + MPNet + LLM text embeddings with CNN-based image regression.
-          Deployed as a FastAPI inference API on Hugging Face Spaces with on-demand caching and batching for sub-200ms latency.
-          React.js dashboard for real-time predictions, fully containerized with Docker.
-        </p>
+        <p class="project-desc">Multimodal ensemble model combining SBERT + MPNet + LLM text embeddings with CNN-based image regression. Deployed as a FastAPI inference API on Hugging Face Spaces with on-demand caching and batching for sub-200ms latency. React.js dashboard for real-time predictions, fully containerized with Docker.</p>
         <div class="project-metrics">
           <span class="metric">SMAPE 43.6</span>
           <span class="metric">Top 10% — 85K+ participants</span>
@@ -685,20 +634,15 @@ footer{
           <a href="https://predictly-ten.vercel.app/" target="_blank" class="proj-link live">↗ Live Demo</a>
         </div>
         <div class="project-stack">
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">FastAPI</span>
-          <span class="stack-tag">SBERT</span>
-          <span class="stack-tag">MPNet</span>
-          <span class="stack-tag">CNN</span>
-          <span class="stack-tag">LLM</span>
-          <span class="stack-tag">Hugging Face</span>
-          <span class="stack-tag">React.js</span>
+          <span class="stack-tag">Python</span><span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">SBERT</span><span class="stack-tag">MPNet</span>
+          <span class="stack-tag">CNN</span><span class="stack-tag">LLM</span>
+          <span class="stack-tag">Hugging Face</span><span class="stack-tag">React.js</span>
           <span class="stack-tag">Docker</span>
         </div>
       </div>
     </div>
 
-    <!-- Shoppica -->
     <div class="project-card fade-in">
       <div class="project-top">
         <div class="project-header">
@@ -707,11 +651,7 @@ footer{
         </div>
         <div class="project-name">Shoppica</div>
         <div class="project-tagline">AI-Powered E-commerce Platform</div>
-        <p class="project-desc">
-          AI-powered assistant and recommendation engine delivering personalized product suggestions and price insights,
-          boosting click-through rates by 25%. Handles 10,000+ daily interactions on a responsive React.js frontend
-          and scalable Node.js/MongoDB backend. End-to-end CI/CD via Jenkins with Dockerized microservices — 60% faster deploys.
-        </p>
+        <p class="project-desc">AI-powered assistant and recommendation engine delivering personalized product suggestions and price insights, boosting click-through rates by 25%. Handles 10,000+ daily interactions on a responsive React.js frontend and scalable Node.js/MongoDB backend. End-to-end CI/CD via Jenkins with Dockerized microservices — 60% faster deploys.</p>
         <div class="project-metrics">
           <span class="metric">+25% CTR</span>
           <span class="metric">10K+ daily users</span>
@@ -723,19 +663,14 @@ footer{
           <a href="https://shoppica-kappa.vercel.app/" target="_blank" class="proj-link live">↗ Live Demo</a>
         </div>
         <div class="project-stack">
-          <span class="stack-tag">React.js</span>
-          <span class="stack-tag">Node.js</span>
-          <span class="stack-tag">MongoDB</span>
-          <span class="stack-tag">Express.js</span>
-          <span class="stack-tag">Docker</span>
-          <span class="stack-tag">Jenkins</span>
-          <span class="stack-tag">AI/ML</span>
-          <span class="stack-tag">Microservices</span>
+          <span class="stack-tag">React.js</span><span class="stack-tag">Node.js</span>
+          <span class="stack-tag">MongoDB</span><span class="stack-tag">Express.js</span>
+          <span class="stack-tag">Docker</span><span class="stack-tag">Jenkins</span>
+          <span class="stack-tag">AI/ML</span><span class="stack-tag">Microservices</span>
         </div>
       </div>
     </div>
 
-    <!-- AquaSense AI -->
     <div class="project-card fade-in">
       <div class="project-top">
         <div class="project-header">
@@ -744,11 +679,7 @@ footer{
         </div>
         <div class="project-name">AquaSense AI</div>
         <div class="project-tagline">Groundwater Depletion Analysis</div>
-        <p class="project-desc">
-          Analyzed 1000+ Sentinel-2 satellite images using OpenCV and NumPy to quantify groundwater variations across diverse terrains.
-          Built an interactive React.js dashboard and FastAPI service with 99% uptime, enabling stakeholders to visualize
-          depletion trends across 15 regions — cutting analysis time by 40%.
-        </p>
+        <p class="project-desc">Analyzed 1000+ Sentinel-2 satellite images using OpenCV and NumPy to quantify groundwater variations across diverse terrains. Built an interactive React.js dashboard and FastAPI service with 99% uptime, enabling stakeholders to visualize depletion trends across 15 regions — cutting analysis time by 40%.</p>
         <div class="project-metrics">
           <span class="metric">1000+ satellite images</span>
           <span class="metric">99% uptime</span>
@@ -761,12 +692,9 @@ footer{
           <a href="https://github.com/Kaviyadharshini1211/AquaSense" target="_blank" class="proj-link">↗ GitHub Repo</a>
         </div>
         <div class="project-stack">
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">OpenCV</span>
-          <span class="stack-tag">NumPy</span>
-          <span class="stack-tag">FastAPI</span>
-          <span class="stack-tag">React.js</span>
-          <span class="stack-tag">Sentinel-2</span>
+          <span class="stack-tag">Python</span><span class="stack-tag">OpenCV</span>
+          <span class="stack-tag">NumPy</span><span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">React.js</span><span class="stack-tag">Sentinel-2</span>
           <span class="stack-tag">Computer Vision</span>
         </div>
       </div>
@@ -775,7 +703,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ ACHIEVEMENTS ═══ -->
+<!-- ACHIEVEMENTS -->
 <section id="achievements">
   <div class="section-eyebrow">04 · Recognition</div>
   <h2 class="section-heading">Achievements</h2>
@@ -811,7 +739,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ EDUCATION ═══ -->
+<!-- EDUCATION -->
 <section id="education">
   <div class="section-eyebrow">05 · Education</div>
   <h2 class="section-heading">Academic Background</h2>
@@ -836,7 +764,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ CONTACT ═══ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-eyebrow" style="justify-content:center">06 · Get In Touch</div>
   <div class="contact-inner">
@@ -846,14 +774,11 @@ footer{
       Reach out — I respond promptly.
     </p>
     <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#fe93959f8897879f9a969f8c8d96979097cfcc9f8d8888be99939f9792d09d9193" class="contact-link">
+      <a href="mailto:mkaviyadharshini12asvv@gmail.com" class="contact-link">
         <span class="cl-dot" style="background:var(--teal)"></span>
-        <span class="__cf_email__" data-cfemail="3b56505a4d52425a5f535a4948535255520a095a484d4d7b5c565a525715585456">[email&#160;protected]</span>
+        mkaviyadharshini12asvv@gmail.com
       </a>
-      <a href="tel:+919345530620" class="contact-link">
-        <span class="cl-dot" style="background:var(--accent)"></span>
-        +91 93455 30620
-      </a>
+
       <a href="https://linkedin.com/in/kaviyadharshinim/" target="_blank" class="contact-link">
         <span class="cl-dot" style="background:#0077b5"></span>LinkedIn ↗
       </a>
@@ -870,12 +795,9 @@ footer{
   </div>
 </section>
 
-<footer>
-  © 2026 · Kaviyadharshini M · Designed & Built with ♥
-</footer>
+<footer>© 2026 · Kaviyadharshini M · Designed & Built with ♥</footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // ── THEME TOGGLE ──
+<script>
   const html = document.documentElement;
   const btn  = document.getElementById('themeToggle');
   const knob = document.getElementById('toggleKnob');
@@ -886,7 +808,6 @@ footer{
     knob.textContent = dark ? '🌙' : '☀️';
   });
 
-  // ── SCROLL FADE-INS ──
   const observer = new IntersectionObserver(entries => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -897,6 +818,15 @@ footer{
   }, { threshold: 0.10 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // ── ACTIVE NAV LINK ──
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 220) current = s.id; });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
+    });
+  });
+</script>
+</body>
+</html>

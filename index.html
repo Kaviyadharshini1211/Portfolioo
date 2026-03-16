@@ -178,12 +178,19 @@ nav{
 
 .hero h1{
   font-family:'Syne',sans-serif;
-  font-size:clamp(3.2rem,7.5vw,6.5rem);
-  font-weight:800;line-height:1.0;letter-spacing:-0.04em;margin-bottom:1.8rem;
+  font-size:clamp(2.6rem,5.5vw,5rem);
+  font-weight:800;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.8rem;
+  overflow:visible;
 }
 .hero-name{
-  background:linear-gradient(135deg,var(--hero-name-start) 0%,var(--hero-name-mid) 50%,var(--hero-name-end) 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;
+  background:linear-gradient(90deg,var(--hero-name-start) 0%,var(--hero-name-mid) 55%,var(--hero-name-end) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  display:block;
+  width:100%;
+  padding-bottom:0.05em;
 }
 .hero-title-line{
   color:var(--text3);font-weight:400;font-size:0.6em;
@@ -479,7 +486,7 @@ footer{
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View My Work ↓</a>
-      <a href="mailto:mkaviyadharshini12asvv@gmail.com" class="btn btn-outline">Get In Touch</a>
+      <a href="/cdn-cgi/l/email-protection#533e3832253a2a32373b3221203b3a3d3a62613220252513343e323a3f7d303c3e" class="btn btn-outline">Get In Touch</a>
       <a href="https://github.com/Kaviyadharshini1211" target="_blank" class="btn btn-outline">GitHub ↗</a>
     </div>
     <div class="hero-meta">
@@ -839,9 +846,9 @@ footer{
       Reach out — I respond promptly.
     </p>
     <div class="contact-links">
-      <a href="mailto:mkaviyadharshini12asvv@gmail.com" class="contact-link">
+      <a href="/cdn-cgi/l/email-protection#fe93959f8897879f9a969f8c8d96979097cfcc9f8d8888be99939f9792d09d9193" class="contact-link">
         <span class="cl-dot" style="background:var(--teal)"></span>
-        mkaviyadharshini12asvv@gmail.com
+        <span class="__cf_email__" data-cfemail="3b56505a4d52425a5f535a4948535255520a095a484d4d7b5c565a525715585456">[email&#160;protected]</span>
       </a>
       <a href="tel:+919345530620" class="contact-link">
         <span class="cl-dot" style="background:var(--accent)"></span>
@@ -867,7 +874,7 @@ footer{
   © 2026 · Kaviyadharshini M · Designed & Built with ♥
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── THEME TOGGLE ──
   const html = document.documentElement;
   const btn  = document.getElementById('themeToggle');
@@ -892,14 +899,4 @@ footer{
 
   // ── ACTIVE NAV LINK ──
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 220) current = s.id; });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
-    });
-  });
-</script>
-</body>
-</html>
+  const navLinks = document.querySelectorAll('
